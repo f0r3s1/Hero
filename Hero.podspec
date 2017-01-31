@@ -13,6 +13,9 @@ Pod::Spec.new do |s|
   s.author           = { "Luke" => "lzhaoyilun@gmail.com" }
   s.source           = { :git => "https://github.com/lkzhao/Hero.git", :tag => s.version.to_s }
   
+  s.tvos.deployment_target = '9.0'
+  s.tvos.frameworks        = 'UIKit', 'Foundation'
+  
   s.ios.deployment_target  = '8.0'
   s.ios.frameworks         = 'UIKit', 'Foundation'
 
