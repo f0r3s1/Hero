@@ -22,6 +22,8 @@
 
 import UIKit
 
+#if TARGET_OS_IOS
+
 protocol HeroDebugViewDelegate {
   func onProcessSliderChanged(progress: Float)
   func onPerspectiveChanged(translation: CGPoint, rotation: CGFloat, scale: CGFloat)
@@ -186,3 +188,5 @@ extension HeroDebugView:UIGestureRecognizerDelegate {
     return perspectiveButton.isSelected
   }
 }
+
+#endif

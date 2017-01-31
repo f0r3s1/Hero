@@ -111,8 +111,9 @@ extension HeroContext {
       snapshot = snapShotView
     } else if let barView = view as? UINavigationBar, barView.isTranslucent {
       let newBarView = UINavigationBar(frame: barView.frame)
-
+      #if TARGET_OS_IOS
       newBarView.barStyle = barView.barStyle
+      #endif
       newBarView.tintColor = barView.tintColor
       newBarView.barTintColor = barView.barTintColor
       newBarView.clipsToBounds = false
